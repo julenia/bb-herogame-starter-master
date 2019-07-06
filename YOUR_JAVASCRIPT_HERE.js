@@ -60,3 +60,20 @@ bag.onclick = function() {
     equipWeapon(hero);
 }
 
+function displayStats(currentHero){
+    const showHero = document.getElementById('showHero');
+    const h4Name = document.createElement('h4');
+    h4Name.innerHTML =`Hero name: ${currentHero.name}`;
+    showHero.appendChild(h4Name);
+    const h4Health = document.createElement('h4');
+    h4Health.innerHTML = `Health: ${currentHero.health}`;
+    showHero.appendChild(h4Health);
+    const h4WeaponType = document.createElement('h4');
+    h4WeaponType.innerHTML = `Weapon type: ${currentHero.weapon.type}`;
+    showHero.appendChild(h4WeaponType);
+    const h4Damage = document.createElement('h4');
+    h4Damage.innerHTML = `Weapon damage: ${currentHero.weapon.damage}`;
+    showHero.appendChild(h4Damage);
+}
+
+displayStats(hero);
