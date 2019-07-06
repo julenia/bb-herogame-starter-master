@@ -1,4 +1,4 @@
-hero = {
+let hero = {
     name : "Winnie the Pooh",
     heroic: true,
     inventory : [],
@@ -22,15 +22,18 @@ function rest(currentHero){
 
 function pickUpItem(currentHero, weapon){
     currentHero.inventory.push(weapon);
-    console.log(currentHero.inventory)
-    //console.log(weapon.type);
     return currentHero;
 
 }
 
-function equipWeapon()
-{
-    
+function equipWeapon(currentHero){
+    if(currentHero.inventory[0]==null) {
+        return null;
+    }
+    else{
+    currentHero.weapon=currentHero.inventory[0];
+    return currentHero;
+    }
 
 }
 
@@ -48,3 +51,12 @@ dagger.onclick = function() {
     };
     pickUpItem(hero, inventory_item);
 }
+const inventory_item = {
+    type : "dagger",
+    damage : 2,
+};
+const bag = document.getElementById('bag');
+bag.onclick = function() {
+    equipWeapon(hero);
+}
+
