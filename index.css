@@ -1,3 +1,12 @@
+
+h1 {
+    align-content : flex-end;
+    color: blue;
+}
+
+
 img {
-    max-width: 300px;
+    width: 25%;
+    align-content: center;
+    
 }
