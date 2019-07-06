@@ -4,7 +4,7 @@ hero = {
     inventory : [],
     health : 10,
     weapon : {
-        type : "",
+        type : "honey",
         damage : 2,
     }
 }
@@ -22,11 +22,14 @@ function rest(currentHero){
 
 function pickUpItem(currentHero, weapon){
     currentHero.inventory.push(weapon);
+    console.log(currentHero.inventory)
+    //console.log(weapon.type);
     return currentHero;
 
 }
 
-function equipWeapon(){
+function equipWeapon()
+{
     
 
 }
@@ -34,4 +37,14 @@ function equipWeapon(){
 const inn = document.getElementById('inn');
 inn.onclick = function() {
     rest(hero);
+}
+
+const dagger = document.getElementById('dagger');
+
+dagger.onclick = function() {
+    const inventory_item = {
+        type : "dagger",
+        damage : 2,
+    };
+    pickUpItem(hero, inventory_item);
 }
