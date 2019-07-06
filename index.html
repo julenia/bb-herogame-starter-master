@@ -12,6 +12,15 @@
     <img id="dagger" src = "http://www.cndajin.com/data/wls/66/8978186.png" alt = "the dagger" onclick="pickUpItem(); return false"></img>
     <img id="bag" src = "http://clipart-library.com/image_gallery/107623.png" alt = "bag" onclick="equipWeapon(); return false"/>
     <section id="showHero"></section>
+    <form class="formSection" onsubmit="changeName(hero); return false">
+        <div >
+            <label for="newName">Give the super hero name:</label>
+            <input type="text" id="newName">
+        </div>
+        <div id="button">
+                <button type="default">Save</button>
+            </div>
+        </form>
   </main>
 
   <!-- 👍 YOUR HTML HERE 👍 -->
