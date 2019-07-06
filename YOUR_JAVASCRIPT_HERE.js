@@ -1,4 +1,4 @@
-let hero = {
+const hero = {
     name : "Winnie the Pooh",
     heroic: true,
     inventory : [],
@@ -75,5 +75,19 @@ function displayStats(currentHero){
     h4Damage.innerHTML = `Weapon damage: ${currentHero.weapon.damage}`;
     showHero.appendChild(h4Damage);
 }
-
 displayStats(hero);
+
+
+function changeName(currentHero){
+    const newName = document.getElementById('newName');
+    currentHero.name = newName.value;
+    const showHero = document.getElementById('showHero');
+    showHero.innerHTML = null;
+    displayStats(hero);
+    newName.value=null;
+
+}
+
+
+
+
