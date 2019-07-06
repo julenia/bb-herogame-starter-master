@@ -1,0 +1,35 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Mocha Tests</title>
+    <link href="lib/mocha.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" media="screen" href="index.css">
+</head>
+<body>
+  <main>
+    <img id="inn" src = "https://cdn140.picsart.com/273253936014211.png?r1024x1024" alt = "winnie the pooh resting" onclick="rest(
+
+    ); return false"></img>
+    <img id="dagger" src = "https://sabersmith.com/wp-content/uploads/2018/12/elven-dagger-satin-with-guard.jpg" alt = "the dagger" onclick="pickUpItem(); return false"></img>
+  </main>
+
+  <!-- 👍 YOUR HTML HERE 👍 -->
+
+
+
+  <!-- I RECOMMEND YOU LEAVE THE REST UNTOUCHED -->
+  <button onclick="mocha.checkLeaks(); mocha.run();">Run the tests!</button>
+
+  <div id="mocha">
+  <!-- MOCHA TEST FEEDBACK WILL BE RENDERED HERE -->
+  </div>
+
+  <script src="lib/chai.js"></script>
+  <script src="lib/mocha.js"></script>
+  <script src="lib/sinon.js"></script>
+  <script>mocha.setup('bdd')</script>
+  <script src="YOUR_JAVASCRIPT_HERE.js"></script>
+  <script src="lib/game_logic.test.js"></script>
+
+</body>
+</html>
